@@ -59,7 +59,7 @@ app.run([
     };
   },
 ]);
-
+// deepak
 app.controller("loginController", [
   "$scope",
   "$location",
