@@ -98,7 +98,7 @@ app.controller("loginController", [
         }
       });
       if (!isgood) {
-        $scope.failure_text = "Invalid Credentials";
+        $scope.failure_text = "Invalid User Try again";
         $scope.login_email = null;
         $scope.login_password = null;
       } else {
@@ -141,33 +141,28 @@ app.controller("productsController", [
     if (!$rootScope.isAuthorized) $location.path("/login");
     $scope.name = "dashboard";
     $rootScope.auth = false;
+    $scope.normal = true;
+    $scope.inc = false;
+    $scope.dec = false;
     $scope.category = "all";
     dataService.getAllProducts(function (data) {
       $rootScope.all_products = data;
       $scope.dashboard_all_products = $rootScope.all_products;
     });
     $scope.sortPriceInc = function () {
-      $scope.dashboard_all_products.sort(function (a, b) {
-        return a.price - b.price;
-      });
+      $scope.normal = false;
+      $scope.inc = true;
+      $scope.dec = false;
+     
     };
+
     $scope.sortPriceDec = function () {
-      $scope.dashboard_all_products.sort(function (a, b) {
-        return b.price - a.price;
-      });
+      $scope.normal = false;
+      $scope.inc = false;
+      $scope.dec = true;
+      
     };
-    // $scope.sortRatingInc = function () {
-    //     $scope.dashboard_all_products.sort(function (a, b) {
-    //         return a.rating.rate - b.rating.rate;
-    //     });
-    // };
-
-    // $scope.sortRatingDec = function () {
-    //     $scope.dashboard_all_products.sort(function (a, b) {
-    //         return b.rating.rate - a.rating.rate;
-    //     });
-    // };
-
+    
     $scope.findByCategory = function (category) {
       if (category == "all") {
         $scope.dashboard_all_products = $rootScope.all_products;
@@ -217,7 +212,6 @@ app.controller("favController", [
         return b.price - a.price;
       });
     };
-    
   },
 ]);
 

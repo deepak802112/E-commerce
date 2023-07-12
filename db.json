@@ -18,34 +18,10 @@
   },
   "users": [
     {
-      "name": "Yuvraj Parashar",
-      "email": "yuvrajparashar710@gmail.com",
-      "password": "1234",
-      "id": 1
-    },
-    {
-      "name": "new user",
-      "email": "newuser@gmail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
       "name": "deepak",
       "email": "dk123@gmail.com",
       "password": "1234",
       "id": 3
-    },
-    {
-      "name": "sk",
-      "email": "sk123@gmail.com",
-      "password": "1234",
-      "id": 4
-    },
-    {
-      "name": "sk",
-      "email": "sk123@gmail.com",
-      "password": "1234",
-      "id": 5
     },
     {
       "name": "demo",
@@ -55,6 +31,24 @@
     },
     {
       "id": 7
+    },
+    {
+      "name": "rohit",
+      "email": "rohit123@gmail.com",
+      "password": "1234",
+      "id": 8
+    },
+    {
+      "name": "rohit",
+      "email": "rohit1@gmail",
+      "password": "1234",
+      "id": 9
+    },
+    {
+      "name": "sumit",
+      "email": "sumit123@gmail.com",
+      "password": "1234",
+      "id": 10
     }
   ],
   "favs": []

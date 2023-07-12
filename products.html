@@ -25,11 +25,12 @@
     <div class="sortBtns">
       <button ng-click="sortPriceInc()">sort by price: lowest</button>
       <button ng-click="sortPriceDec()">sort by price: highest</button>
-      <!-- <button ng-click="sortRatingInc()">sort by rating: lowest</button>
-      <button ng-click="sortRatingDec()">sort by rating: highest</button> -->
+     
     </div>
     <div class="products">
-      <div class="product" ng-repeat="x in dashboard_all_products">
+      
+      <!-- Normal Order -->
+      <div class="product" ng-if="normal" ng-repeat="x in dashboard_all_products">
         <div ng-click="sendSingleProduct(x)">
           <div class="product-image">
             <img src="{{x.image}}" alt="" />
@@ -50,6 +51,53 @@
           <button ng-click="addToFav(x)">Add to Fav</button>
         </div>
       </div>
+    
+      <!-- Increasing order -->
+      <div class="product" ng-if="inc" ng-repeat="x in dashboard_all_products | orderBy: 'price'">
+        <div ng-click="sendSingleProduct(x)">
+          <div class="product-image">
+            <img src="{{x.image}}" alt="" />
+          </div>
+          <div class="product-name">
+            <b> {{x.title}} </b>
+          </div>
+          <div class="product-price">
+            <i> {{x.price}} </i>
+          </div>
+          <div class="product-description">{{x.description}}</div>
+          <div class="product-category">
+            <i> {{x.category}} </i>
+          </div>
+          <div class="product-rating">Rating: {{x.rating.rate}}</div>
+        </div>
+        <div class="product-fav">
+          <button ng-click="addToFav(x)">Add to Fav</button>
+        </div>
+      </div>
+
+      <!-- Decreasing Order -->
+      <div class="product" ng-if="dec" ng-repeat="x in dashboard_all_products | orderBy: 'price' : true">
+        <div ng-click="sendSingleProduct(x)">
+          <div class="product-image">
+            <img src="{{x.image}}" alt="" />
+          </div>
+          <div class="product-name">
+            <b> {{x.title}} </b>
+          </div>
+          <div class="product-price">
+            <i> {{x.price}} </i>
+          </div>
+          <div class="product-description">{{x.description}}</div>
+          <div class="product-category">
+            <i> {{x.category}} </i>
+          </div>
+          <div class="product-rating">Rating: {{x.rating.rate}}</div>
+        </div>
+        <div class="product-fav">
+          <button ng-click="addToFav(x)">Add to Fav</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
