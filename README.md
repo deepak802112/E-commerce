@@ -17,3 +17,11 @@ getting the products filter by price in order to:
 -ascending
 -descending
 there is onemore functionality i.e we can make any product fav as well
+
+there are your nav bar:
+home
+products
+fav
+signout:if we click on this it will redirect to home page
+
+
