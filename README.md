@@ -1,4 +1,4 @@
-created a ecommerce website by using fakestoreapi,in that i ahve used differect technologies.
+created a ecommerce website by using fakestoreapi,in that i have used differect technologies.
 tenologies used:
 HTML
 CSS
@@ -22,6 +22,6 @@ there are your nav bar:
 home
 products
 fav
-signout:if we click on this it will redirect to home page
+signout:if we click on that, it will redirect you to home page
 
 
